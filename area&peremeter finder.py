@@ -123,7 +123,48 @@ def help_msg_peremeter():
 
 
 def prog():
-    pass
+    while True:
+        x = help_msg_1()
+        valid = (1, 2, 3, 4, 5)
+
+        if x not in valid:
+            print("not an option")
+
+        elif x in valid:
+
+            if x == 1:
+                shape = help_msg_area()
+                if shape == 1:
+                    input = input("circle diameter/radius: ")
+                    try:
+                        value = float(input)
+                    except:
+                        print("not a number")
+
+                    print(area_circle(value))
+
+            elif x == 2:
+                if x in valid:
+                    if x == 2:
+                        if shape == 1:
+                            input = input("circle diameter/radius: ")
+                            try:
+                                value = float(input)
+                            except:
+                                print("not a number")
+
+                            area_circle(value)
+
+
+"""
+    AREA AND PEREMETER AND ANGLES
+
+    FOR AREA, TYPE 1
+    FOR PEREMETER, TYPE 2
+    FOR HELP, TYPE 3
+    FOR MISSING ANGLE OF TRIANGLE, TYPE 4
+    FOR EXIT, TYPE 5
+    """
 
 
 prog()
